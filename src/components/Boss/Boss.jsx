@@ -1,7 +1,8 @@
 import "./Boss.scss";
+import {Link} from "react-router-dom"
 
 const Boss = ({boss}) => {
-    const {bossName, bossHealth,bossSouls,bossImage,bossDesc} = boss;
+    const {bossId, bossName, bossHealth,bossSouls,bossImage,bossDesc} = boss;
 
     return(
         <div className="boss">
@@ -12,6 +13,7 @@ const Boss = ({boss}) => {
             <div className="boss__text">Boss Souls: {bossSouls}</div>
             </div>
             <p className="boss__text">{bossDesc}</p>
+            <Link key={bossId} to={`/bodss/edit/${bossId}`}>Edit</Link>
         </div>
     );
 };

@@ -1,0 +1,46 @@
+import { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import "./EditBoss.scss";
+import Boss from "../../components/Boss/Boss";
+import BossForm from "../../components/BossForm/BossForm";
+
+const EditBoss = () =>{
+    const {id} = useParams();
+    const [boss,setBoss] = null;
+
+    const getBossById = async id => {
+        const response = await fetch(`http://localhost:8080/boss/${id}`);
+        const bossData = await response.json();
+        setBoss(bossData);
+    }
+    useEffect(() => {
+        getBossById(id);
+    },[id])
+
+    const handleUpdate = async updatedBoss => {
+        const response = await fetch(`http://localhost:8080/boss/${id}`,{
+            method:'PUT',
+            headers: {
+                "Content-Type": "application/json",
+              },
+              body:JSON.stringify(updatedBoss)
+        });
+        if(response.ok){
+            alert("Boss updated");
+            setBoss(updatedBoss);
+        }else{
+            const message = await response.text();
+            alert(message);
+        }
+        
+    }
+
+    return(
+        <>
+        <h2>Edit Boss</h2>
+        <Boss boss={boss}/>
+        <BossForm defaultFormState={boss} handleSubmit={handleUpdate}/>
+        </>
+    )
+}
+export default EditBoss;
