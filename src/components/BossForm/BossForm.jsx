@@ -7,7 +7,7 @@ const BossForm = ({handleSubmit}) => {
     return(
         <div className="form">
             <h3>Form</h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(boss)}>
             <input type="text" placeholder="Boss name"
               onInput={event=>setBoss({...boss,bossName:event.target.value})}  />
             <input type="text" placeholder="Boss health"
