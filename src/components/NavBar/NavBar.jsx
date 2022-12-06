@@ -12,7 +12,7 @@ const NavBar = () =>{
             Bosses
         </Link>
 
-        <Link className="nav-bar__link" to="/bosses/create">
+        <Link className="nav-bar__link" to="/boss/create">
         Add Boss
         </Link>
     </div>
