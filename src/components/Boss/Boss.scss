@@ -1,0 +1,22 @@
+@use "../../styles/variables" as *;
+
+.boss{
+    background-color: $color-primary;
+    color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__image{
+        height: 200px;
+        border: 1px solid $color-secondary;
+    }
+
+    &__healthAndSouls{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__text{
+        padding: 1em;
+    }
+}
