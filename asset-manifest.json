@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dark-souls-database-front-end/static/css/main.073c9b0a.css",
+    "main.js": "/dark-souls-database-front-end/static/js/main.754e78d8.js",
+    "static/js/787.6e2f28f1.chunk.js": "/dark-souls-database-front-end/static/js/787.6e2f28f1.chunk.js",
+    "static/media/logo.svg": "/dark-souls-database-front-end/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/dark-souls-database-front-end/index.html",
+    "main.073c9b0a.css.map": "/dark-souls-database-front-end/static/css/main.073c9b0a.css.map",
+    "main.754e78d8.js.map": "/dark-souls-database-front-end/static/js/main.754e78d8.js.map",
+    "787.6e2f28f1.chunk.js.map": "/dark-souls-database-front-end/static/js/787.6e2f28f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.754e78d8.js"
+  ]
+}
