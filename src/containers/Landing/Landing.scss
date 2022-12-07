@@ -1,0 +1,24 @@
+@use "../../styles/variables" as *;
+
+.landing-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-primary;
+    &__title{
+        font-size: 3em;
+        color: $color-secondary;
+    }
+    &__logo{
+        width: 600px;
+        animation: rotation 160s infinite linear;
+    }
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
