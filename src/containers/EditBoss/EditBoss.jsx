@@ -1,18 +1,20 @@
-import { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate, Navigate } from "react-router-dom";
 import "./EditBoss.scss";
 import Boss from "../../components/Boss/Boss";
 import BossForm from "../../components/BossForm/BossForm";
 
 const EditBoss = () =>{
     const {id} = useParams();
-    const [boss,setBoss] = null;
+    const navigate = useNavigate();
+    const [boss,setBoss] = useState(null);
 
     const getBossById = async id => {
         const response = await fetch(`http://localhost:8080/boss/${id}`);
         const bossData = await response.json();
         setBoss(bossData);
     }
+
     useEffect(() => {
         getBossById(id);
     },[id])
@@ -21,10 +23,12 @@ const EditBoss = () =>{
         const response = await fetch(`http://localhost:8080/boss/${id}`,{
             method:'PUT',
             headers: {
-                "Content-Type": "application/json",
+                'Accept': 'application/json',
+                "Content-Type": "application/json"
               },
               body:JSON.stringify(updatedBoss)
         });
+
         if(response.ok){
             alert("Boss updated");
             setBoss(updatedBoss);
@@ -35,11 +39,29 @@ const EditBoss = () =>{
         
     }
 
+   const handleDelete = async bossToBeDeleted => {
+    const response = await fetch(`http://localhost:8080/boss/${id}`,{
+        method:"DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+
+    if(response.ok){
+        alert("Boss deleted");
+        navigate("/");
+    }else {
+        const message = await response.text();
+        alert(message);
+      }
+   };
+    if(!boss) return(<h1>Loading...</h1>);
     return(
         <>
         <h2>Edit Boss</h2>
         <Boss boss={boss}/>
         <BossForm defaultFormState={boss} handleSubmit={handleUpdate}/>
+        <button onClick={handleDelete}>Delete</button>
         </>
     )
 }
