@@ -11,12 +11,25 @@ const ViewBosses = () =>{
         setBosses(bossData);
     }
 
+    const filterBosses = async ( event) =>{
+        const inputValue = event.target.value.toLowerCase();
+        if(inputValue  !==""){
+            let filteredBosses = bosses;
+            filteredBosses = filteredBosses.filter(boss => { return (boss.bossName.toLowerCase().includes(inputValue))})
+            setBosses(filteredBosses);
+        }else{
+            getBosses();
+        }
+        
+    }
+
     useEffect(() =>{
         getBosses();
     },[])
 
     return(
         <>
+        <input type="text" onInput={filterBosses}/>
         <BossList bosses={bosses}/>
         </>
     )
