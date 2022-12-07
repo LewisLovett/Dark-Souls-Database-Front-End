@@ -1,18 +1,16 @@
 @use "../../styles/variables" as *;
 
 .nav-bar {
-  width: 100%;
-  margin: 10px 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-bottom: 5px solid $color-primary;
-  padding-bottom: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em;
+  background-color: $color-tertiary;
 
   &__link {
+    padding:  0.5em 1em;;
     text-decoration: none;
-    font-size: 18px;
-    margin: 10px 0;
-    color: $color-secondary;
+    color: $color-primary;
+    font-size: 1.5em;
   }
 }

@@ -5,12 +5,14 @@
     flex-direction: column;
     align-items: center;
     background-color: $color-primary;
+    height: 100vh;
     &__title{
         font-size: 3em;
         color: $color-secondary;
+        text-align: center;
     }
     &__logo{
-        width: 600px;
+        width: 65vw;
         animation: rotation 160s infinite linear;
     }
 }
