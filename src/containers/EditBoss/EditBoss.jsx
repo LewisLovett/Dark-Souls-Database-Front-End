@@ -57,12 +57,11 @@ const EditBoss = () =>{
    };
     if(!boss) return(<h1>Loading...</h1>);
     return(
-        <>
-        <h2>Edit Boss</h2>
-        <Boss boss={boss}/>
+        <section className="edit-section">
+        <h2 className="edit-section__title">Edit Boss</h2>
         <BossForm defaultFormState={boss} handleSubmit={handleUpdate}/>
-        <button onClick={handleDelete}>Delete</button>
-        </>
+        <button className="edit-section__delete-btn" onClick={handleDelete}>Delete</button>
+        </section>
     )
 }
 export default EditBoss;

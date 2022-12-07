@@ -1,0 +1,23 @@
+@use "../../styles/variables" as *;
+
+.filter-container{
+    display: flex;
+    padding: 1em;
+    background-color: $color-primary;
+    justify-content: center;
+    font-family: 'DSFont';
+    &__label{
+        
+        color: $color-secondary;
+        padding: 0.1em;
+        font-size: 1.2em;
+    }
+    &__input{
+        background-color: $color-tertiary;
+        color: $color-primary;
+        padding: 0.1em;
+        margin: 0 0.7em;
+        font-family: 'DSFontBold';
+        font-size: 1em;
+    }
+}

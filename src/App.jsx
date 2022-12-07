@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import ViewBosses from "./containers/ViewBosses/ViewBosses";
 import CreateBoss from "./containers/CreateBoss/CreateBoss";
 import EditBoss from './containers/EditBoss/EditBoss';

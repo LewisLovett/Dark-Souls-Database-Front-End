@@ -19,11 +19,11 @@ const CreateBoss = () => {
             alert(message);
           }
     };
-    const defaultFormState = { bossName: "", bossHealth: 0, bossSouls: 0, bossImage: "",bossDesc:"" };
+    const defaultFormState = { bossName: "", bossHealth: 0, bossSouls: 0, bossImage: "",bossDesc:"",gameAppearance:0 };
 
     return(
         <>
-        <h2>Create Boss</h2>
+        <h2 className="section-title">Create Boss</h2>
         <BossForm handleSubmit={handleSubmit} defaultFormState={defaultFormState}/>
         </>
     )

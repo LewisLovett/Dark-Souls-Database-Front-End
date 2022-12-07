@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+
+.boss-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__input{
+        background-color: $color-tertiary;
+        color: $color-primary;
+        padding: 0.1em;
+        margin: 0.5em 0.7em;
+        font-family: 'DSFontBold';
+        font-size: 2em;
+  
+
+        &--text-area{
+            height: 7em;
+            font-size: 1em;
+            width: 24em;
+        }
+    }
+    &__submit{
+        background-color: $color-tertiary;
+        color: $color-primary;
+        text-decoration: none;
+        padding: 0.3em 1em;
+        border: 2px solid $color-quandary;
+        font-size: 2em;
+        margin: 1em;
+        
+    }
+}

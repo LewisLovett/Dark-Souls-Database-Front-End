@@ -1,4 +1,13 @@
 $color-primary:#353535;
 $color-secondary:#D2D7DF;
-$color-tertiary:#8A897C
-// #FFFFFF #BDBBB0 #8A897C
+$color-tertiary:#BDBBB0;
+$color-quandary:#8A897C;
+
+@font-face {
+    font-family: 'DSFont';
+    src: url('../assets/fonts/OptimusPrinceps.ttf') format('truetype');  
+}
+@font-face {
+    font-family: 'DSFontBold';
+    src: url('../assets/fonts/OptimusPrincepsSemiBold.ttf') format('truetype');  
+}

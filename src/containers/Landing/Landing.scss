@@ -5,11 +5,12 @@
     flex-direction: column;
     align-items: center;
     background-color: $color-primary;
-    height: 100vh;
     &__title{
         font-size: 3em;
         color: $color-secondary;
         text-align: center;
+        font-family: 'DSFont';
+        padding: 1em;
     }
     &__logo{
         width: 65vw;
