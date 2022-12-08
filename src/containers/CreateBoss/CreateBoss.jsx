@@ -19,7 +19,7 @@ const CreateBoss = () => {
             alert(message);
           }
     };
-    const defaultFormState = { bossName: "", bossHealth: 0, bossSouls: 0, bossImage: "",bossDesc:"",gameAppearance:0 };
+    const defaultFormState = { bossName: "", bossHealth: null, bossSouls: null, bossImage: "",bossMusic:"",bossDesc:"",gameAppearance:null };
 
     return(
         <>

@@ -27,6 +27,8 @@ const BossForm = ({handleSubmit,defaultFormState}) => {
                 onInput={event=>setBoss({...boss,gameAppearance:parseInt(event.target.value) })}  />
               <input className="boss-form__input" type="text" placeholder="Boss Image" value={boss.bossImage}
                 onInput={event=>setBoss({...boss,bossImage:event.target.value})}  />
+              <input className="boss-form__input" type="text" placeholder="Boss Music" value={boss.bossMusic}
+                onInput={event=>setBoss({...boss,bossMusic:event.target.value})}  />
               <textarea form="bossForm" className="boss-form__input boss-form__input--text-area"placeholder="Boss description" value={boss.bossDesc}
                 onInput={event=>setBoss({...boss,bossDesc:event.target.value})}></textarea>
               <button className="boss-form__submit" type="submit">Submit</button>

@@ -2,10 +2,14 @@ import "./Boss.scss";
 import {Link} from "react-router-dom"
 
 const Boss = ({boss}) => {
-    const {id, bossName, bossHealth,bossSouls,bossImage,bossDesc, gameAppearance} = boss;
+    const {id, bossName, bossHealth,bossSouls,bossImage,bossMusic,bossDesc, gameAppearance} = boss;
     let displayImage = bossImage;
     if(bossImage!=='sif.png'&& bossImage!=='pinwheel.png'&&bossImage!=='iron_golem.png'&&bossImage!=='abyss_watchers.png'&&bossImage!=='royal_rat_authority.png'){
         displayImage = 'placeholder.png';
+    }
+    let displayMusic = bossMusic;
+    if(bossMusic!=='sif.mp3'&& bossMusic!=='pinwheel.mp3'&&bossMusic!=='iron_golem.mp3'&&bossMusic!=='abyss_watchers.mp3'&&bossMusic!=='royal_rat_authority.mp3'){
+        displayMusic = 'firelink_shrine.mp3';
     }
 
     return(
@@ -18,6 +22,11 @@ const Boss = ({boss}) => {
             </div>
             <div className="boss__text">Appears in Dark Souls {gameAppearance}</div>
             <p className="boss__text">{bossDesc}</p>
+            <div className="boss__text--audio">Boss Theme</div>
+            <audio className="boss__audio" controls loop>
+                <source src={require(`../../assets/music/boss_themes/${displayMusic}`)} type="audio/mpeg"/>
+                Your browser does not support the audio element.
+            </audio>
             <Link className="boss__edit" key={id} to={`/boss/edit/${id}`}>Edit</Link>
         </div>
     );
