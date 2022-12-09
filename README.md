@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Dark Souls Boss Database
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the front end repository for a Database that stores infomation for the Bosses in the Dark Souls game series. This project was created as part of the Nology developer course over a period of 1 week. The goal of the project was to create an full stack project which interacts with a database by creating, reading, updating and deleting records. The programs used to create the project were .
 
-## Available Scripts
+## Buit Using
+- Java
+- Spring
+- MySQL
+- React
+- SCSS
 
-In the project directory, you can run:
+## Programs Used
+- Visual Studio Code
+- IntelliJ
+- Postman
+- MySQL WorkBench
+- Spring Initializr
 
-### `npm start`
+## Landing Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+When the website first loads the user is shown the landing page, from here they can navigate to the Bosses page or to the Create Boss Page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Screenshot of Landing Page](./src/assets/images/readme_images/landing_page.png)
 
-### `npm test`
+## Bosses Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+On the Bosses page each Boss record is displayed using the Boss component and arranged in a list using the Boss List Component. Each Boss record stores the Boss name, Boss Health, Amount of Souls gained after defeating the Boss, an image of the Boss, which game the Boss appears in, a short description of the Boss and the Boss' theme. This infomation is stores in a MySQL database and is accessed using an api.
 
-### `npm run build`
+![Screenshot of Landing Page](./src/assets/images/readme_images/bosses_page.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The user can filter through the Bosses by name and game appearance. They can also sort the Boss List by name health or souls.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screenshot of Landing Page](./src/assets/images/readme_images/bosses_filtered_page.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Edit Boss Page
 
-### `npm run eject`
+When the user click the 'Edit' button on a Boss component they are taken to the Edit page for that Boss. Here they can edit the details of the Boss and when they click submit and API PUT call is made and the record is updated.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Screenshot of Landing Page](./src/assets/images/readme_images/edit_page.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Create Boss Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+On the Create Boss page the user is asked to enter the details for a new Boss. Once they click submit the new Boss is added to the database using an API POST call. An important note is that the boss images and music are saved locally on the front end so when a new boss is created a placeholder image and mp3 are used when initialising the Boss component.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Screenshot of Landing Page](./src/assets/images/readme_images/create_page.png)
